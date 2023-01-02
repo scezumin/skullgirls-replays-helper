@@ -1,8 +1,8 @@
-#### _Delete, defragment, and annotate the Skullgirls replays files without breaking the brittle file structure -- even while Skullgirls is running._
+#### _Delete, defragment, and annotate the Skullgirls replays files without breaking the brittle file structure._
+You can run this when Skullgirls is not running, or while you're browsing your replays, or at any time if you have no deletions pending. However, don't try to delete files if you intend to play some more games, or you'll end up with gaps in your replays directory, which is basically a death sentence on being able to access replays since I haven't coded that part of the defragging.
 
 ## PRE-REQUISITES
 You're gonna need Python 3.  Go install the latest one.
-
 
 # GETTING STARTED
 First, make a `preferences.py` file, based on the `preferences_TEMPLATE.py`, and fill it out with the values corresponding to your Steam name, your own computer, and your own, well, preferences.
