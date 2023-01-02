@@ -17,7 +17,7 @@ NOTES:
 ```
 
 ## HOW TO output.txt
-This file should be pretty self-explanatory, but you _can_ set the `NAME_LENGTH_LIMIT` as well as customize the abbreviations for every fighter, including missing fighters.  You probably shouldn't set anything to an empty string or spaces though -- if you do, you're on your own, as those waters are untested.  The output file will have lines that look something like this, corresponding to the file number, your opponent's name (truncated if necessary), your opponent's roster, your roster, and your notes (if you left any.)
+This file should be pretty self-explanatory, but you _can_ set the `NAME_LENGTH_LIMIT` as well as customize the abbreviations for every fighter, including the spacer for a roster with only one or two fighters.  You probably shouldn't set anything to an empty string or spaces though -- if you do, you're on your own, as those waters are untested.  The output file will have lines that look something like this, corresponding to the file number, your opponent's name (truncated if necessary), your opponent's roster, your roster, and your notes (if you left any.)
 ```
 0018 Opponent      | Pea ... ...  vs  MsF Cer ...  | too easy
 0019 Opponent      | Pea ... ...  vs  Sqg ... ...  | quite a comeback!
