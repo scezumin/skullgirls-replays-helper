@@ -79,7 +79,7 @@ def extract_padded_number_from_filename(filename):
 
 
 def pad_fighters_list(fighters, pad_to=3):
-    fighters += ['...'] * (pad_to - len(fighters))
+    fighters += [EMPTY_FIGHTER] * (pad_to - len(fighters))
 
 
 def map_replay_files(filenames):

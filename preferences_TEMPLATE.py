@@ -5,6 +5,8 @@ INPUT_FILENAME = r"C:\Users\Scezumin\PycharmProjects\skullgirls-replays-helper\i
 OUTPUT_FILENAME = r"C:\Users\Scezumin\PycharmProjects\skullgirls-replays-helper\output.txt"
 COMMENT_PREFIX = "#"
 
+# Note: it is recommended that all of the below values be the same length.
+EMPTY_FIGHTER = "..."
 FIGHTER_ABBREVIATIONS = {
     "Annie": "Ann",
     "Beowulf": "Beo",
