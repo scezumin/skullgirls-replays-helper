@@ -1,3 +1,4 @@
 output.txt
 .idea/
 __pycache__/
+preferences.py
