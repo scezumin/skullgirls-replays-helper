@@ -1,5 +1,8 @@
 #### _Delete, defragment, and annotate the Skullgirls replays files without breaking the brittle file structure -- even while Skullgirls is running._
 
+## PRE-REQUISITES
+You're gonna need Python 3.  Go install the latest one.
+
 
 # GETTING STARTED
 First, make a `preferences.py` file, based on the `preferences_TEMPLATE.py`, and fill it out with the values corresponding to your Steam name, your own computer, and your own, well, preferences.
