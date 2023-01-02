@@ -1,4 +1,4 @@
-#### _Delete, defragment, and annotate the Skullgirls replays files without breaking the brittle file structure._
+#### _Delete, defragment, and annotate the Skullgirls replays files without breaking the brittle file structure -- even while Skullgirls is running._
 
 
 # GETTING STARTED
