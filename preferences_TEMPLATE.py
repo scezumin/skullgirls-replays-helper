@@ -14,7 +14,8 @@ COMMENT_PREFIX = "#"
 #####################
 # OUTPUT FILE PREFS #
 #####################
-NAME_LENGTH_LIMIT = 13
+NAME_LENGTH_LIMIT = 18
+SPECTATOR_VERSUS_INFIX = " v "
 # Note: it is recommended that all the below values be the same length.
 EMPTY_FIGHTER = "..."
 FIGHTER_ABBREVIATIONS = {

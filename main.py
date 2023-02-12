@@ -69,6 +69,29 @@ def parse_ini_file(filename):
                 else:
                     result[k.OPPONENT] = player_key
                 result[player_key][k.NAME] = truncate_player_name(player_name)
+
+    # There are two circumstances where the player is unidentifiable.
+    if result[k.PLAYER] == '':
+        # The first I can't explain.  There are missing names in the file, but the replay works fine.
+        # In this case we'll just make some guesses that can be easily identified as guesses.
+        # I'm coding it to deliberately only catch the "both names missing" case because dealing with the
+        # hypothetical "one name missing" case is messier and possibly unnecessary.
+        if result[k.PLAYER_1][k.NAME] == '' and result[k.PLAYER_2][k.NAME] == '':
+            result[k.PLAYER] = k.PLAYER_1
+            result[k.OPPONENT] = k.PLAYER_2
+            result[k.PLAYER_1][k.NAME] = "MISSING_NAME_P1"
+            result[k.PLAYER_2][k.NAME] = "MISSING_NAMES"
+        # The other case is simply due to spectation.  You observe a game with two players who are both not you.
+        # In this case we erroneously assign result[k.OPPONENT] twice, but this is basically harmless.
+        else:
+            # Instead, we'll hack the name to be an amalgamation of the two players we watched and lie about
+            # whom the player is.
+            result[k.PLAYER] = k.PLAYER_1
+            cut_name_length = int((NAME_LENGTH_LIMIT - len(SPECTATOR_VERSUS_INFIX)) / 2)
+            result[k.PLAYER_2][k.NAME] = result[k.PLAYER_1][k.NAME][:cut_name_length] + \
+                                         SPECTATOR_VERSUS_INFIX + \
+                                         result[k.PLAYER_2][k.NAME][:cut_name_length]
+
     pad_fighters_list(result[k.PLAYER_1][k.FIGHTERS])
     pad_fighters_list(result[k.PLAYER_2][k.FIGHTERS])
     return result
